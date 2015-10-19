@@ -1,10 +1,5 @@
 (function($) {
     $.fn.blink = function(speed) {
-        var defaults = {
-            delay: 500
-        };
-
-        var speed = $.extend(defaults, speed);
 
         return this.each(function() {
             var obj = $(this);
@@ -15,11 +10,10 @@
                 else {
                     $(obj).css('visibility', 'visible');
                 }
-            }, speed.delay);
+            }, speed);
         });
     }
 }(jQuery))
 
 
-
-$('div').blink({ delay: 400});
+$('.sentence').blink(500);
